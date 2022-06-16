@@ -1,6 +1,5 @@
 import java.sql.*;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 public class Document {
     private static int counter = 1;
@@ -25,47 +24,50 @@ public class Document {
         this.topic = topic;
         this.category = category;
         this.tagList = tagList;
-        System.out.println("...Done");
+        System.out.println("...Done Creating a document");
     }
 
+    /**
+     * ajoute a la table Document un nouveau document
+     * @return void
+     * @params : none
+     */
     public void ajouterBdd(){
         System.out.println("\nAdding a new document in Process...");
-        final String documentSql = "INSERT INTO Document VALUES (0, ?, ?, ?, ?, ?)";
+        final String sql = "INSERT INTO Document VALUES (0, ?, ?, ?, ?, ?)";
         try (Connection con = DriverManager.getConnection(dbURL, user, password);
-                 PreparedStatement documentStmt = con.prepareStatement(documentSql)) {
-                    documentStmt.setString(1, DocumentName);
-                    documentStmt.setDate(2, DocumentDate);
-                    documentStmt.setString(3, StorageAdress);
-                    documentStmt.setInt(4, topic.getTopicID());
-                    documentStmt.setInt(5, category.getCategoryID());
+                 PreparedStatement stmt = con.prepareStatement(sql)) {
+                    //set les paramètres de doc
+                    stmt.setString(1, DocumentName);
+                    stmt.setDate(2, DocumentDate);
+                    stmt.setString(3, StorageAdress);
+                    stmt.setInt(4, topic.getTopicID());
+                    stmt.setInt(5, category.getCategoryID());
+
+                    //ajouter tous les liens entre Document et topic (plusieurs topic disponible)
                     for (Tag tag : tagList){
-                        tag.ajouterContenir(counter);
+                        //Si nouveau Tag detectee alors creation
+                        tag.rechercherContenirBdd(counter);
                     }
+
+                    //incrementation du compteur pour le donner à contenir
                     counter++;
-                    documentStmt.executeUpdate();
-                    System.out.println("...Done");
+
+                    //Condition pour ajouter si besoin des valeurs dans les aurtes tables
+                    //Si nouveau Topic detectee alors creation
+                    topic.rechercherBdd();
+                    //Si nouvealle category detectee alors creation
+                    category.rechercherBdd();
+
+                    //inserer dans la BDD les params de Document
+                    stmt.executeUpdate();
+        //Exception mauvaise requete SQL
         } catch (SQLException e) {
             e.printStackTrace();
+        //Exception conflit clef primaire / foreign clef
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
-    }
-
-    public Document(){
-
-    }
-
-    public void test() {
-        System.out.println("\ndemo4...");
-        final String sql = "SELECT * FROM Tag";
-        try (Connection con = DriverManager.getConnection(dbURL, user, password);
-             PreparedStatement stmt = con.prepareStatement(sql)) {
-                ResultSet rs = stmt.executeQuery();
-                while (rs.next()) {
-                    int id = rs.getInt("TagID");
-                    String name = rs.getString("TagName");
-                    System.out.println(id + " " + name);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        System.out.println("\n...Done Adding a new document");
     }
 }

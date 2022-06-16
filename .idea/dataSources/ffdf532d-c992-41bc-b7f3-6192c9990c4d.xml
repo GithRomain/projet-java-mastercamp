@@ -4892,7 +4892,6 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Position>6</Position>
     </column>
     <column id="1100" parent="362" name="CategoryID">
-      <AutoIncrement>1</AutoIncrement>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -4958,7 +4957,6 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Primary>1</Primary>
     </key>
     <column id="1114" parent="364" name="TagID">
-      <AutoIncrement>1</AutoIncrement>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -4973,7 +4971,6 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Primary>1</Primary>
     </key>
     <column id="1117" parent="365" name="TopicID">
-      <AutoIncrement>1</AutoIncrement>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -4995,23 +4992,5 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <DataType>int|0s</DataType>
       <Position>2</Position>
     </column>
-    <foreign-key id="1122" parent="366" name="contenir_ibfk_1">
-      <ColNames>DocumentID</ColNames>
-      <RefColNames>DocumentID</RefColNames>
-      <RefTableName>Document</RefTableName>
-    </foreign-key>
-    <foreign-key id="1123" parent="366" name="contenir_ibfk_2">
-      <ColNames>TagID</ColNames>
-      <RefColNames>TagID</RefColNames>
-      <RefTableName>Tag</RefTableName>
-    </foreign-key>
-    <index id="1124" parent="366" name="DocumentID">
-      <ColNames>DocumentID</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="1125" parent="366" name="TagID">
-      <ColNames>TagID</ColNames>
-      <Type>btree</Type>
-    </index>
   </database-model>
 </dataSource>
