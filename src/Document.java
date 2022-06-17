@@ -42,6 +42,7 @@ public class Document {
                     stmt.setInt(5, category.getID());
                     //inserer dans la BDD les params de Document
                     stmt.executeUpdate();
+                    lienContenir();
         //Exception mauvaise requete SQL
         } catch (SQLException e) {
             e.printStackTrace();

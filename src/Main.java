@@ -15,18 +15,17 @@ public class Main {
         Document document5 = new Document("Document 5", new java.sql.Date(50), "doc5", new Topic("Efrei 2024"), new Category( "food"), new ArrayList<>(List.of()));
 
         document1.ajouterBdd();
-        document1.lienContenir();
+
 
         document2.ajouterBdd();
-        document2.lienContenir();
+
 
         document3.ajouterBdd();
-        document3.lienContenir();
+
 
         document4.ajouterBdd();
-        document4.lienContenir();
+
 
         document5.ajouterBdd();
-        document5.lienContenir();
     }
 }
