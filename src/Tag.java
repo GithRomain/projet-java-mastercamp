@@ -9,6 +9,10 @@ public class Tag extends Table{
         super(TagName);
     }
 
+    public Tag(Tag tag){
+        super(tag.getName());
+    }
+
     /**
      * trouver la combinaison de DocumentID et TagID si il n'existe pas, on l'ajoute
      * @return void

@@ -7,4 +7,8 @@ public class Topic extends Table{
     public Topic(String TopicName){
         super(TopicName);
     }
+
+    public Topic(Topic topic){
+        super(topic.getName());
+    }
 }

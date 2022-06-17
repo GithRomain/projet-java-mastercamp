@@ -10,16 +10,19 @@ public class Document {
     private String StorageAdress;
     private Topic topic;
     private Category category;
-    private List<Tag> tagList;
+    private List<Tag> tagList = new ArrayList<>();
 
     public Document(String DocumentName, java.sql.Date DocumentDate, String StorageAdress, Topic topic, Category category, List<Tag> tagList){
         System.out.println("\nCreating a document in Process...");
         this.DocumentName = DocumentName;
         this.DocumentDate = DocumentDate;
         this.StorageAdress = StorageAdress;
-        this.topic = topic;
-        this.category = category;
-        this.tagList = tagList;
+        this.topic = new Topic(topic);
+        this.category = new Category(category);
+        for (Tag tag : tagList){
+            Tag newTag = new Tag(tag);
+            this.tagList.add(newTag);
+        }
         System.out.println("...Done Creating a document");
     }
 
@@ -39,14 +42,6 @@ public class Document {
                     stmt.setString(3, StorageAdress);
                     stmt.setInt(4, topic.getID());
                     stmt.setInt(5, category.getID());
-                    //ajouter tous les liens entre Document et topic (plusieurs topic disponible)
-                    for (Tag tag : tagList){
-                        //Si nouveau Tag detectee alors creation
-                        tag.findCombinaisonContenir(counter);
-                    }
-                    this.DocumentID = counter;
-                    //incrementation du compteur pour le donner à contenir
-                    counter++;
                     //inserer dans la BDD les params de Document
                     stmt.executeUpdate();
         //Exception mauvaise requete SQL
@@ -57,5 +52,34 @@ public class Document {
             throw new RuntimeException(e);
         }
         System.out.println("\n...Done Adding a new document");
+    }
+
+    private void findId(){
+        System.out.println("\nFind ID of Document in Process...");
+        int id = 0;
+        //Rechercher en fonction des paramètre de la sous classe
+        final String sql = "SELECT DocumentID FROM Document";
+        try (Connection con = DriverManager.getConnection(Main.dbUrl, Main.user, Main.password);
+             PreparedStatement stmt = con.prepareStatement(sql)) {
+            ResultSet rs = stmt.executeQuery();
+            //lister toutes les ID
+            while (rs.next()) {
+                this.DocumentID = rs.getInt("DocumentID");
+            }
+        }
+        //Exception mauvaise requete SQL
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+        System.out.println("...Done Find ID of Document");
+    }
+
+    public void lienContenir(){
+        this.findId();
+        //ajouter tous les liens entre Document et Tag
+        for (Tag tag : tagList){
+            //Si nouveau Tag detectee alors creation
+            tag.findCombinaisonContenir(counter);
+        }
     }
 }
