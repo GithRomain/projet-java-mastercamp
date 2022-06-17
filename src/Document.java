@@ -2,8 +2,6 @@ import java.sql.*;
 import java.util.*;
 
 public class Document {
-    private static int counter = 1;
-
     private int DocumentID;
     private String DocumentName;
     private java.sql.Date DocumentDate;
@@ -78,7 +76,7 @@ public class Document {
         //ajouter tous les liens entre Document et Tag
         for (Tag tag : tagList){
             //Si nouveau Tag detectee alors creation
-            tag.findCombinaisonContenir(counter);
+            tag.findCombinaisonContenir(this.DocumentID);
         }
     }
 }

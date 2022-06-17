@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbbc8ed8-6d0c-4f91-8c6b-5dc3e7b19c76" name="Changes" comment="Amélioration première partie">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ffdf532d-c992-41bc-b7f3-6192c9990c4d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ffdf532d-c992-41bc-b7f3-6192c9990c4d.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Category.java" afterDir="false" />
+    <list default="true" id="cbbc8ed8-6d0c-4f91-8c6b-5dc3e7b19c76" name="Changes" comment="première partie code final">
       <change beforePath="$PROJECT_DIR$/src/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Document.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Topic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Topic.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +98,7 @@
       <workItem from="1655329419231" duration="6762000" />
       <workItem from="1655336212631" duration="7156000" />
       <workItem from="1655343646668" duration="93000" />
-      <workItem from="1655468735315" duration="13520000" />
+      <workItem from="1655468735315" duration="13908000" />
     </task>
     <task id="LOCAL-00001" summary="template commit">
       <created>1655329363940</created>
@@ -134,7 +128,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655480136634</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="première partie code final">
+      <created>1655482593500</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1655482593500</updated>
+    </task>
+    <task id="LOCAL-00006" summary="première partie code final">
+      <created>1655482605424</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1655482605424</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +163,7 @@
     <MESSAGE value="template commit" />
     <MESSAGE value="3 commit" />
     <MESSAGE value="Amélioration première partie" />
-    <option name="LAST_COMMIT_MESSAGE" value="Amélioration première partie" />
+    <MESSAGE value="première partie code final" />
+    <option name="LAST_COMMIT_MESSAGE" value="première partie code final" />
   </component>
 </project>
