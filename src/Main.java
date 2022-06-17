@@ -7,8 +7,7 @@ public class Main {
     public static String user = "root";
     public static String password = "c0ll05u5";
 
-    public static void main(String[] args) throws SQLException {
-
+    public static void main(String[] args){
         Document document1 = new Document("Document 1", new java.sql.Date(10), "doc1", new Topic("Cluster Graduation Projet en 2022"), new Category("plan"), new ArrayList<>(List.of(new Tag("medical"), new Tag("technical"))));
         document1.ajouterBdd();
         Document document2 = new Document("Document 2", new java.sql.Date(20), "doc2", new Topic( "CS243 Course Files in Fall 2021"), new Category("school"), new ArrayList<>(List.of(new Tag("legal"))));

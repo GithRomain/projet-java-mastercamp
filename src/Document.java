@@ -12,10 +12,6 @@ public class Document {
     private Category category;
     private List<Tag> tagList;
 
-    private final String dbURL = Main.dbUrl;
-    private final String user = Main.user;
-    private final String password = Main.password;
-
     public Document(String DocumentName, java.sql.Date DocumentDate, String StorageAdress, Topic topic, Category category, List<Tag> tagList){
         System.out.println("\nCreating a document in Process...");
         this.DocumentName = DocumentName;
@@ -35,7 +31,7 @@ public class Document {
     public void ajouterBdd(){
         System.out.println("\nAdding a new document in Process...");
         final String sql = "INSERT INTO Document VALUES (0, ?, ?, ?, ?, ?)";
-        try (Connection con = DriverManager.getConnection(dbURL, user, password);
+        try (Connection con = DriverManager.getConnection(Main.dbUrl, Main.user, Main.password);
                  PreparedStatement stmt = con.prepareStatement(sql)) {
                     //set les paramètres de doc
                     stmt.setString(1, DocumentName);
@@ -48,6 +44,7 @@ public class Document {
                         //Si nouveau Tag detectee alors creation
                         tag.findCombinaisonContenir(counter);
                     }
+                    this.DocumentID = counter;
                     //incrementation du compteur pour le donner à contenir
                     counter++;
                     //inserer dans la BDD les params de Document

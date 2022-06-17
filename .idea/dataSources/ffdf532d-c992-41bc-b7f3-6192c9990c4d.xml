@@ -4934,64 +4934,46 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <foreign-key id="1109" parent="363" name="document_ibfk_1">
-      <ColNames>TopicID</ColNames>
-      <RefColNames>TopicID</RefColNames>
-      <RefTableName>Topic</RefTableName>
-    </foreign-key>
-    <foreign-key id="1110" parent="363" name="document_ibfk_2">
-      <ColNames>CategoryID</ColNames>
-      <RefColNames>CategoryID</RefColNames>
-      <RefTableName>Category</RefTableName>
-    </foreign-key>
-    <index id="1111" parent="363" name="TopicID">
-      <ColNames>TopicID</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="1112" parent="363" name="CategoryID">
-      <ColNames>CategoryID</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="1113" parent="363" name="PRIMARY">
+    <key id="1109" parent="363" name="PRIMARY">
       <ColNames>DocumentID</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="1114" parent="364" name="TagID">
+    <column id="1110" parent="364" name="TagID">
       <AutoIncrement>7</AutoIncrement>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1115" parent="364" name="TagName">
+    <column id="1111" parent="364" name="TagName">
       <DataType>varchar(50)|0s</DataType>
       <Position>2</Position>
     </column>
-    <key id="1116" parent="364" name="PRIMARY">
+    <key id="1112" parent="364" name="PRIMARY">
       <ColNames>TagID</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="1117" parent="365" name="TopicID">
+    <column id="1113" parent="365" name="TopicID">
       <AutoIncrement>3</AutoIncrement>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1118" parent="365" name="TopicName">
+    <column id="1114" parent="365" name="TopicName">
       <DataType>varchar(50)|0s</DataType>
       <Position>2</Position>
     </column>
-    <key id="1119" parent="365" name="PRIMARY">
+    <key id="1115" parent="365" name="PRIMARY">
       <ColNames>TopicID</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="1120" parent="366" name="DocumentID">
+    <column id="1116" parent="366" name="DocumentID">
       <DataType>int|0s</DataType>
       <Position>1</Position>
     </column>
-    <column id="1121" parent="366" name="TagID">
+    <column id="1117" parent="366" name="TagID">
       <DataType>int|0s</DataType>
       <Position>2</Position>
     </column>
