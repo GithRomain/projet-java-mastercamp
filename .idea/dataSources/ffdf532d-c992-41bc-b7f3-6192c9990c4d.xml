@@ -4892,11 +4892,12 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Position>6</Position>
     </column>
     <column id="1100" parent="362" name="CategoryID">
+      <AutoIncrement>6</AutoIncrement>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1101" parent="362" name="Name">
+    <column id="1101" parent="362" name="CategoryName">
       <DataType>varchar(50)|0s</DataType>
       <Position>2</Position>
     </column>
@@ -4957,6 +4958,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Primary>1</Primary>
     </key>
     <column id="1114" parent="364" name="TagID">
+      <AutoIncrement>7</AutoIncrement>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -4971,6 +4973,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Primary>1</Primary>
     </key>
     <column id="1117" parent="365" name="TopicID">
+      <AutoIncrement>3</AutoIncrement>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbbc8ed8-6d0c-4f91-8c6b-5dc3e7b19c76" name="Changes" comment="template commit">
+    <list default="true" id="cbbc8ed8-6d0c-4f91-8c6b-5dc3e7b19c76" name="Changes" comment="3 commit">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/ffdf532d-c992-41bc-b7f3-6192c9990c4d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ffdf532d-c992-41bc-b7f3-6192c9990c4d.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Category.java" afterDir="false" />
@@ -97,7 +97,9 @@
       <updated>1655316536244</updated>
       <workItem from="1655316538454" duration="9728000" />
       <workItem from="1655329419231" duration="6762000" />
-      <workItem from="1655336212631" duration="6980000" />
+      <workItem from="1655336212631" duration="7156000" />
+      <workItem from="1655343646668" duration="93000" />
+      <workItem from="1655468735315" duration="9022000" />
     </task>
     <task id="LOCAL-00001" summary="template commit">
       <created>1655329363940</created>
@@ -106,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655329363940</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="3 commit">
+      <created>1655343381601</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655343381601</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +134,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="template commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="template commit" />
+    <MESSAGE value="3 commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="3 commit" />
   </component>
 </project>

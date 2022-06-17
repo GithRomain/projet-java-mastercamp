@@ -41,24 +41,15 @@ public class Document {
                     stmt.setString(1, DocumentName);
                     stmt.setDate(2, DocumentDate);
                     stmt.setString(3, StorageAdress);
-                    stmt.setInt(4, topic.getTopicID());
-                    stmt.setInt(5, category.getCategoryID());
-
+                    stmt.setInt(4, topic.getID());
+                    stmt.setInt(5, category.getID());
                     //ajouter tous les liens entre Document et topic (plusieurs topic disponible)
                     for (Tag tag : tagList){
                         //Si nouveau Tag detectee alors creation
-                        tag.rechercherContenirBdd(counter);
+                        tag.findCombinaisonContenir(counter);
                     }
-
                     //incrementation du compteur pour le donner à contenir
                     counter++;
-
-                    //Condition pour ajouter si besoin des valeurs dans les aurtes tables
-                    //Si nouveau Topic detectee alors creation
-                    topic.rechercherBdd();
-                    //Si nouvealle category detectee alors creation
-                    category.rechercherBdd();
-
                     //inserer dans la BDD les params de Document
                     stmt.executeUpdate();
         //Exception mauvaise requete SQL
