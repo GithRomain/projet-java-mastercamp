@@ -6,11 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="cbbc8ed8-6d0c-4f91-8c6b-5dc3e7b19c76" name="Changes" comment="première partie code final">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/ffdf532d-c992-41bc-b7f3-6192c9990c4d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ffdf532d-c992-41bc-b7f3-6192c9990c4d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/Rapport IT Projet.docx" beforeDir="false" afterPath="$PROJECT_DIR$/doc/Rapport IT Projet.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Document.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tag.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +57,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -66,8 +67,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/doc" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/lib" />
     </key>
   </component>
@@ -103,7 +104,7 @@
       <workItem from="1655329419231" duration="6762000" />
       <workItem from="1655336212631" duration="7156000" />
       <workItem from="1655343646668" duration="93000" />
-      <workItem from="1655468735315" duration="22856000" />
+      <workItem from="1655468735315" duration="29724000" />
     </task>
     <task id="LOCAL-00001" summary="template commit">
       <created>1655329363940</created>
@@ -182,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655484648583</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="première partie code final">
+      <created>1655491725297</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1655491725297</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,5 +213,9 @@
     <MESSAGE value="Amélioration première partie" />
     <MESSAGE value="première partie code final" />
     <option name="LAST_COMMIT_MESSAGE" value="première partie code final" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

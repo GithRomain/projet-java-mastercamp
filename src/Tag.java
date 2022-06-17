@@ -50,7 +50,7 @@ public class Tag extends Table{
      * @return void
      * @params int
      */
-    private void ajouterBddContenir(int IdDocument){
+    public void ajouterBddContenir(int IdDocument){
         System.out.println("\nAdding a new Contenir in Process...");
         final String sql = "INSERT INTO Contenir VALUES (?, ?)";
         //Rechercher en fonction des paramètre de la sous classe

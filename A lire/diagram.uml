@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Document</OriginalElement>
+  <nodes>
+    <node x="101.10775862068965" y="-93.0">Table</node>
+    <node x="-487.89224137931035" y="455.0">DocumentSQLs</node>
+    <node x="57.61206896551727" y="144.0">Tag</node>
+    <node x="-126.89224137931035" y="311.0">Document</node>
+    <node x="341.6120689655172" y="167.5">Category</node>
+    <node x="-54.38793103448273" y="167.5">Topic</node>
+    <node x="161.12931034482762" y="814.0">Main</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Document" target="Tag" relationship="CREATE">
+      <point x="121.25" y="-225.5" />
+      <point x="236.85775862068965" y="290.0" />
+      <point x="251.875" y="290.0" />
+      <point x="251.875" y="270.0" />
+      <point x="317.75" y="270.0" />
+      <point x="317.75" y="240.0" />
+      <point x="255.61206896551727" y="240.0" />
+      <point x="66.0" y="37.5" />
+    </edge>
+    <edge source="Main" target="Document" relationship="CREATE">
+      <point x="0.0" y="-60.5" />
+      <point x="245.62931034482762" y="788.0" />
+      <point x="115.60775862068965" y="788.0" />
+      <point x="0.0" y="225.5" />
+    </edge>
+    <edge source="Document" target="Topic" relationship="CREATE">
+      <point x="121.25" y="-225.5" />
+      <point x="236.85775862068965" y="290.0" />
+      <point x="251.875" y="290.0" />
+      <point x="251.875" y="260.0" />
+      <point x="-142.0" y="260.0" />
+      <point x="-142.0" y="250.0" />
+      <point x="-31.387931034482733" y="250.0" />
+      <point x="-23.0" y="14.0" />
+    </edge>
+    <edge source="Main" target="Category" relationship="CREATE">
+      <point x="0.0" y="-60.5" />
+      <point x="245.62931034482762" y="788.0" />
+      <point x="460.8793103448277" y="788.0" />
+      <point x="460.8793103448277" y="270.0" />
+      <point x="433.1120689655172" y="270.0" />
+      <point x="30.5" y="14.0" />
+    </edge>
+    <edge source="Document" target="Tag" relationship="TO_MANY">
+      <point x="-121.25" y="-225.5" />
+      <point x="-5.642241379310349" y="290.0" />
+      <point x="114.12931034482762" y="290.0" />
+      <point x="114.12931034482762" y="250.0" />
+      <point x="123.61206896551727" y="250.0" />
+      <point x="-66.0" y="37.5" />
+    </edge>
+    <edge source="Document" target="Category" relationship="TO_ONE">
+      <point x="-121.25" y="-225.5" />
+      <point x="-5.642241379310349" y="290.0" />
+      <point x="114.12931034482762" y="290.0" />
+      <point x="114.12931034482762" y="250.0" />
+      <point x="372.1120689655172" y="250.0" />
+      <point x="-30.5" y="14.0" />
+    </edge>
+    <edge source="Document" target="Topic" relationship="TO_ONE">
+      <point x="-121.25" y="-225.5" />
+      <point x="-5.642241379310349" y="290.0" />
+      <point x="114.12931034482762" y="290.0" />
+      <point x="114.12931034482762" y="250.0" />
+      <point x="14.612068965517267" y="250.0" />
+      <point x="23.0" y="14.0" />
+    </edge>
+    <edge source="Category" target="Table" relationship="GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="402.6120689655172" y="119.0" />
+      <point x="193.10775862068965" y="119.0" />
+      <point x="0.0" y="93.5" />
+    </edge>
+    <edge source="Main" target="Tag" relationship="CREATE">
+      <point x="0.0" y="-60.5" />
+      <point x="245.62931034482762" y="788.0" />
+      <point x="368.60775862068965" y="788.0" />
+      <point x="368.60775862068965" y="260.0" />
+      <point x="317.75" y="260.0" />
+      <point x="317.75" y="240.0" />
+      <point x="255.61206896551727" y="240.0" />
+      <point x="66.0" y="37.5" />
+    </edge>
+    <edge source="Main" target="Topic" relationship="CREATE">
+      <point x="0.0" y="-60.5" />
+      <point x="245.62931034482762" y="788.0" />
+      <point x="-142.0" y="788.0" />
+      <point x="-142.0" y="250.0" />
+      <point x="-31.387931034482733" y="250.0" />
+      <point x="-23.0" y="14.0" />
+    </edge>
+    <edge source="Topic" target="Table" relationship="GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="-8.387931034482733" y="119.0" />
+      <point x="193.10775862068965" y="119.0" />
+      <point x="0.0" y="93.5" />
+    </edge>
+    <edge source="Tag" target="Table" relationship="GENERALIZATION">
+      <point x="0.0" y="-37.5" />
+      <point x="189.61206896551727" y="119.0" />
+      <point x="193.10775862068965" y="119.0" />
+      <point x="0.0" y="93.5" />
+    </edge>
+    <edge source="Document" target="Category" relationship="CREATE">
+      <point x="121.25" y="-225.5" />
+      <point x="236.85775862068965" y="290.0" />
+      <point x="251.875" y="290.0" />
+      <point x="251.875" y="280.0" />
+      <point x="460.8793103448277" y="280.0" />
+      <point x="460.8793103448277" y="270.0" />
+      <point x="433.1120689655172" y="270.0" />
+      <point x="30.5" y="14.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.5104961832061069" showDependencies="true" x="-12.0" y="421.0" />
+  <SelectedNodes>
+    <node>DocumentSQLs</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
