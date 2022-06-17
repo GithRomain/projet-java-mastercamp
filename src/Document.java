@@ -82,7 +82,7 @@ public class Document {
      * @return void
      * @params none
      */
-    public void lienContenir(){
+    private void lienContenir(){
         this.findId();
         //ajouter tous les liens entre Document et Tag
         for (Tag tag : tagList){
