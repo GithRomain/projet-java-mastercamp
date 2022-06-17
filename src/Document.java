@@ -56,7 +56,6 @@ public class Document {
 
     private void findId(){
         System.out.println("\nFind ID of Document in Process...");
-        int id = 0;
         //Rechercher en fonction des paramètre de la sous classe
         final String sql = "SELECT DocumentID FROM Document";
         try (Connection con = DriverManager.getConnection(Main.dbUrl, Main.user, Main.password);
