@@ -52,6 +52,11 @@ public class Document {
         System.out.println("\n...Done Adding a new document");
     }
 
+    /**
+     * trouver l'id du Document
+     * @return void
+     * @params none
+     */
     private void findId(){
         System.out.println("\nFind ID of Document in Process...");
         //Rechercher en fonction des paramètre de la sous classe
@@ -71,6 +76,11 @@ public class Document {
         System.out.println("...Done Find ID of Document");
     }
 
+    /**
+     * faire le lien entre Document et Tag, en ajoutant les combinaisons dans Contenir
+     * @return void
+     * @params none
+     */
     public void lienContenir(){
         this.findId();
         //ajouter tous les liens entre Document et Tag
