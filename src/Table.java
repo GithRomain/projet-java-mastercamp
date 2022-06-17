@@ -6,9 +6,12 @@ public abstract class Table {
 
     private String NameSubClass = String.valueOf(Table.super.getClass()).substring(6);
 
+    public Table(){
+    }
+
     public Table(String Name){
         this.Name = Name;
-        findId();
+        this.findId();
     }
 
     /**

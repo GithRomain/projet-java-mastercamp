@@ -1,7 +1,7 @@
 import java.sql.*;
 import java.util.*;
 
-public class Document {
+public class Document{
     private int DocumentID;
     private String DocumentName;
     private java.sql.Date DocumentDate;
@@ -90,4 +90,95 @@ public class Document {
             tag.findCombinaisonContenir(this.DocumentID);
         }
     }
+
+    /**
+     * print la liste des documents par Category
+     *
+     * @return void
+     * @params String
+     */
+    public static void listDocumentByCategory(String category) {
+        System.out.println("\nVoici la liste des documents par Category :");
+        try (Connection con = DriverManager.getConnection(Main.dbUrl, Main.user, Main.password);
+             PreparedStatement stmt = con.prepareStatement(DocumentSQLs.ListDocByCategory)) {
+                for (List document : getStrings(category, stmt).orElseThrow()){
+                    System.out.println("\n" + document.toString());
+                }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * print la liste des documents par Topic
+     *
+     * @return void
+     * @params String
+     */
+    public static void listDocumentByTopic(String topic) {
+        System.out.println("\nVoici la liste des documents par Topic :");
+        try (Connection con = DriverManager.getConnection(Main.dbUrl, Main.user, Main.password);
+             PreparedStatement stmt = con.prepareStatement(DocumentSQLs.ListDocByTopic)) {
+            for (List document : getStrings(topic, stmt).orElseThrow()){
+                System.out.println("\n" + document.toString());
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * print la liste des documents par Tag
+     *
+     * @return void
+     * @params String
+     */
+    public static void listDocumentByTag(String tag) {
+        System.out.println("\nVoici la liste des documents par Tag :");
+        try (Connection con = DriverManager.getConnection(Main.dbUrl, Main.user, Main.password);
+             PreparedStatement stmt = con.prepareStatement(DocumentSQLs.ListDocByTag)) {
+            for (List document : getStrings(tag, stmt).orElseThrow()){
+                System.out.println("\n" + document.toString());
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * renvoie un set de List optionel de document en fonction d'un paramètre à rentrer dans une recherche
+     *
+     * @return Optional(Set(List(Object)))
+     * @params String, PreparedStatement
+     */
+    private static Optional<Set<List<Object>>> getStrings(String str, PreparedStatement stmt) throws SQLException {
+        Set<List<Object>> listSet = new HashSet<>();
+        stmt.setString(1, str);
+        ResultSet rs = stmt.executeQuery();
+        while (rs.next()) {
+            int DocumentID = rs.getInt("DocumentID");
+            String DocumentName = rs.getString("DocumentName");
+            java.sql.Date DocumentDate = rs.getDate("DocumentDate");
+            String StorageAdress = rs.getString("StorageAddress");
+            int TopicID = rs.getInt("TopicID");
+            int CategoryID = rs.getInt("CategoryID");
+
+            listSet.add(List.of(DocumentID, DocumentName, DocumentDate, StorageAdress, TopicID, CategoryID));
+        }
+        return Optional.of(listSet);
+    }
+}
+
+class DocumentSQLs{
+    static final String ListDocByCategory = """
+            select * from Document where CategoryID = (select CategoryID from Category where CategoryName = ?)
+            """;
+
+    static final String ListDocByTopic = """
+            select * from Document where TopicID = (select TopicID from Topic where TopicName = ?)
+            """;
+
+    static final String ListDocByTag = """
+            select Document.DocumentID, Document.DocumentName, Document.DocumentDate, Document.StorageAddress, Document.TopicID, Document.CategoryID from Document join Contenir on Document.DocumentID = Contenir.DocumentID join Tag on Contenir.TagID = Tag.TagID where TagName = ?
+            """;
 }
